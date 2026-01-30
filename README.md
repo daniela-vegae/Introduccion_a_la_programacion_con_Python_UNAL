@@ -12,6 +12,8 @@ aplicado a la resolución de problemas.
 - Github
 - UNcode (programa propio de la UNAL para la ejecución y calificación de codigos)
 
+################# UNIDAD 1 ###################
+
 ## temas
 1. # conversión de tipos
 
@@ -154,6 +156,93 @@ v = v_ms * 3.6
 
 # 5) Reportar el resultado de la operación con el formato solicitado.
 print(f"La posición final es de {x:.2f} m y la velocidad es de {v:.3f} km/h")
+
+
+########### UNIDAD 2 ###################
+
+### Estructuras de control condicionales con Python ###
+
+1. Valores booleanos:  dato primitivo que representa el valor de verdad de una condición lógica
+
+Verdadero si la condición SÍ se cumple.
+Falso si la condición NO se cumple.
+
+Estos valores pueden ser escritos como valores literales con las palabras reservadas True(para verdadero) y False(para falso)
+
+s.islower(): Determina si la cadena está compuesta solo por caracteres en minúscula
+
+# ¿La cadena 'hola' solo tiene caracteres en minúscula? -> VERDADERO
+"hola".islower()
+
+Otro ejemplo claro es identificar si un valor corresponde a un tipo de dato en particular, posible con la función isinstance:
+
+# ¿El valor 500.5 es un valor de tipo entero (int)? -> FALSO
+isinstance(500.5, int)
+
+1.1 Operadores relacionales: la familia de operadores relacionales , con la cual podemos comparar dos o más valores, dando como resultado una expresión booleana 
+
+# Los valores tienen que ser estrictamente iguales.
+50.00000000 == 49.99999999
+
+En ese sentido 'b'es menor que 'c', pues aparece antes en el alfabeto, pero es mayor que 'C', pues las mayúsculas están codificadas antes que las minúsculas.
+
+# Los dígitos van antes que las mayúsculas, que van antes que las minúsculas.
+'1' < 'B'
+
+1.2 Operadores lógicos
+
+¿Y si quisiéramos combinar valores booleanos para obtener expresiones booleanas que consideren varios valores?
+
+Por ejemplo, imagine que está encargado de los pedidos de una empresa. Para despachar un pedido debe verificar que la cantidad de productos sea mayor que 0 (no tiene sentido despachar productos negativos o nulos) ya su vez que la cantidad del pedido sea menor que la cantidad de productos que se tienen en inventario.
+
+con la formaA and B. Esta expresión se conoce como conjunción lógica (representada en matemáticas con el operador ) y solo se cumple si 𝐴 ∧ 𝐵  ambas condiciones se cumplen, es decir, si ambas expresiones tienen como valorTrue
+
+# Ejemplo del pedido y el stock.
+n_pedido = 4
+n_inventario = 100
+
+(n_pedido > 0) and (n_pedido <= n_inventario)
+
+la condición 𝐴  O la condición , escrita en 𝐵  Python comoA or B. Esta expresión se conoce como disyunción lógica (representada en matemáticas con el operador ) y solo se cumple si yo ∨ yo  alguna de las condiciones se cumple.
+
+# Ejemplo del registro con teléfono o email.
+
+is_valid_email = False
+is_valid_phone = True
+
+is_valid_email or is_valid_phone
+
+num == 5 or 6 or 7 # NO ES CORRECTO
+El operador ordebe unir los resultados de las tres condiciones de igualdad, pues cada extremo del operador orespera una expresión booleana y recibe un valor numérico. 
+num == 5 or num == 6 or num == 7
+
+Finalmente, podemos realizar expresiones compuestas con los tres operadores lógicos con la ayuda de paréntesis y usar expresiones booleanas como las obtenidas al usar operadores relacionales:
+
+a = 10
+b = 5
+
+a < b  or not (a == 0 or b == 0)
+
+2. Sentencias de control condicional
+
+2.1 Sentencia (if)
+
+if CONDICIÓN:
+  # <---- El bloque de código debe estar correctamente indentado.
+  # <---- Por lo general se hace con el tabulador (o con 2 espacios en blanco).
+  # Código que se ejecuta si la condición es VERDADERA.
+  # ...
+# Código que se ejecuta si la condición es FALSA o cuando
+# termine de ejecutarse el código dentro de la estructura.
+
+
+
+ 
+
+
+
+
+
 
 
 

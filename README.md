@@ -117,6 +117,44 @@ x = x0+v0*t+0.5*a*t**2
 
 print(f"La posición final es {x:.2f} metros.")
 
+## EJERCICIO 2##
+
+##################################################
+#### 💻 Tarea: Ejercicios de física (II)  💻 ####
+##################################################
+
+## 👇 Escriba su código DEBAJO de esta línea 👇 ##
+
+
+# 1) Obtener de la entrada del programa los parámetros iniciales.
+x0 = input()
+v0 = input()
+a = input()
+t = input()
+
+# 2) Convertir cada valor de texto obtenido de la entrada en un valor numérico decimal.
+x0 = float(x0)        # m
+v0 = float(v0)        # km/h
+a = float(a)          # m/s^2
+t = float(t)          # s
+
+# 3) Realizar las operaciones matemáticas para las conversiones de unidad de medida necesarias.
+# Convertir velocidad inicial de km/h a m/s
+v0_ms = v0 / 3.6
+
+# 4) Utilizar los valores numéricos en las expresiones matemáticas de cada ecuación y obtener el valor de:
+# i. Posición final (m)
+x = x0 + v0_ms * t + 0.5 * a * t**2
+
+# ii. Velocidad final (m/s)
+v_ms = v0_ms + a * t
+
+# Convertir velocidad final a km/h
+v = v_ms * 3.6
+
+# 5) Reportar el resultado de la operación con el formato solicitado.
+print(f"La posición final es de {x:.2f} m y la velocidad es de {v:.3f} km/h")
+
 
 
 

@@ -157,8 +157,9 @@ v = v_ms * 3.6
 # 5) Reportar el resultado de la operación con el formato solicitado.
 print(f"La posición final es de {x:.2f} m y la velocidad es de {v:.3f} km/h")
 
-
+########################################
 ########### UNIDAD 2 ###################
+########################################
 
 ### Estructuras de control condicionales con Python ###
 
@@ -223,6 +224,45 @@ b = 5
 
 a < b  or not (a == 0 or b == 0)
 
+###### Ejercicio 1 - expresiones y operadores booleanos (External resource) ################
+
+Para que el punto (px, py) esté dentro del rectángulo, debe cumplir cuatro condiciones al mismo tiempo:
+
+1. Límite Izquierdo: El punto no puede estar más a la izquierda que el inicio del rectángulo.
+
+px >= x
+
+2. Límite Derecho: El punto no puede superar el ancho total. El borde derecho está en x + w.
+
+px <= x + w
+
+3. Límite Inferior: El punto no puede estar por debajo de la base.
+
+py >= y
+
+4. Límite Superior: El punto no puede superar la altura total. El borde superior está en y + h.
+
+py <= y + h
+
+# 1. Captura de datos (Entradas)
+x = float(input())  # Esquina inferior izquierda X
+y = float(input())  # Esquina inferior izquierda Y
+w = float(input())  # Ancho
+h = float(input())  # Alto
+px = float(input()) # Posición X del punto
+py = float(input()) # Posición Y del punto
+
+# 2. Definir los límites máximos
+limite_derecho = x + w
+limite_superior = y + h
+
+# 3. Evaluar las condiciones
+# El punto está dentro si cumple las 4 condiciones simultáneamente
+esta_dentro = (px >= x) and (px <= limite_derecho) and (py >= y) and (py <= limite_superior)
+
+# 4. Mostrar el resultado
+print(esta_dentro)
+
 2. Sentencias de control condicional
 
 2.1 Sentencia (if)
@@ -234,6 +274,56 @@ if CONDICIÓN:
   # ...
 # Código que se ejecuta si la condición es FALSA o cuando
 # termine de ejecutarse el código dentro de la estructura.
+
+Ejemplo
+
+num = 5
+
+if num > 20:
+  num = 20
+  print('El número máximo permitido es 20.')
+
+print(num)
+
+Se imprime el numero 5 porque no se cumple la condicion de num > 20, a menos de que num sea un valor mayor a 20. se imprime (el numero mázimo permitido es 20)
+
+NOTA : Si omite los dos puntos (:) la sentencia no se ejecutará y producirá un error de sintaxis.
+
+2.2 Sentencia (else)
+
+Python implementa la sentencia else, del inglés si no , con la posibilidad de crear una ruta alternativa a partir de la misma condición. Esto se puede definir con la siguiente sintaxis:
+
+if CONDICIÓN:
+  # Código que se ejecuta si la condición es VERDADERA.
+  # ...
+else:
+  # Código que se ejecuta si la condición es FALSA.
+  # ...
+
+# Código que se ejecuta cuando termine de ejecutarse
+# el código dentro de alguna de las estructuras.
+
+Ejemplo
+
+# Pruebe a cambiar el valor de la variable 'a'
+a = 100
+
+if a > 0:
+  print('El número ingresado es positivo.')
+else:
+  print('El número ingresado es negativo o cero.')
+
+Se imprime "el numero ingresado es positivo", ya que cumple con If. Sino, imprime el numero ingresado es negativo o cero. 
+
+Si el código que queremos escribir es de una línea, podemos escribirlo al frente de los dos puntos :, como se muestra en el siguiente ejemplo:
+
+if 15 ** 2 > 100: print("15 al cuadrado es mayor que 100.")
+else: print("15 al cuadrado NO es mayor que 100.")
+
+resultado: 15 al cuadrado es mayor que 100.
+
+
+
 
 
 
